@@ -9,6 +9,7 @@ public class Exo
     [DataType(DataType.Date)]
     public DateTime ReleaseDate {get; set;}
     public string? Genre {get; set;}
-    public decimal Price {get; set;}
+   [Range(1, int.MaxValue, ErrorMessage = "Only positive number allowed")]
+    public decimal Price {get;set;}
 
 }
